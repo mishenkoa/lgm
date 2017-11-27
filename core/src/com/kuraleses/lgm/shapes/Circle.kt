@@ -25,7 +25,6 @@ class Circle(
 
     override fun render() {
         Render.i.renderer.begin(shapeType)
-        
         Render.i.renderer.color = Color.valueOf(color)
         Render.i.renderer.circle(body.position.x, body.position.y, radius)
         Render.i.renderer.end()
