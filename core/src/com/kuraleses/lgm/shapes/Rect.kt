@@ -19,7 +19,7 @@ class Rect(
 
     init {
         val bodyDef = BodyDef()
-        bodyDef.type = BodyDef.BodyType.StaticBody
+        bodyDef.type = BodyDef.BodyType.KinematicBody
         bodyDef.position.set(position)
         body = World2d.i.world.createBody(bodyDef)
 

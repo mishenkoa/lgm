@@ -36,4 +36,13 @@ public class LevelManager private constructor() {
         var level1 = Level(mutableListOf(circle, circle2, rect, rect2), LevelState.IN_PROGRESS, 1)
         return level1
     }
+
+    // yes. this is pcuk.
+    fun createPcuk() : Level {
+        val rightBall = Circle(Vector2(200f, 100f), 100f, "#ffe0bd", ShapeRenderer.ShapeType.Filled)
+        val leftBall = Circle(Vector2(300f, 100f), 100f, "#ffe0bd", ShapeRenderer.ShapeType.Filled)
+        val tail = Rect(Vector2(200f, 50f), 100f, 300f,"#ffe0bd", ShapeRenderer.ShapeType.Filled)
+        val head = Circle(Vector2(250f, 350f), 75f, "#ffc0cb", ShapeRenderer.ShapeType.Filled)
+        return Level(mutableListOf(rightBall, leftBall, head, tail), LevelState.IN_PROGRESS, 1)
+    }
 }

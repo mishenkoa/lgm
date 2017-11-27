@@ -19,7 +19,7 @@ class Circle(
 
     init {
         val bodyDef = BodyDef()
-        bodyDef.type = BodyDef.BodyType.DynamicBody
+        bodyDef.type = BodyDef.BodyType.KinematicBody
         bodyDef.position.set(position)
         body = World2d.i.world.createBody(bodyDef)
 
