@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlinVersion = '1.1.+'
+    ext.kotlinVersion = '1.1.61'
 
     repositories {
         mavenLocal()
@@ -100,6 +100,7 @@ project(":core") {
         compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         compile "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
         compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+        compile "com.google.code.gson:gson:2.8.2"
     }
 }
 
