@@ -6,33 +6,23 @@ import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.physics.box2d.*
 import com.kuraleses.lgm.Render
 import com.kuraleses.lgm.World2d
+import com.kuraleses.lgm.interfaces.RigidBody
 import com.kuraleses.lgm.interfaces.Shape
+import com.kuraleses.lgm.physics.RectBody
 
 class Rect(
         override var position: Vector2,
         var width: Float, var height: Float,
         override var color: String,
-        override var shapeType: ShapeRenderer.ShapeType
-    ) : Shape {
+        override var shapeType: ShapeRenderer.ShapeType,
+        bodyType: BodyDef.BodyType,
+        density : Float = 1f,
+        friction : Float = 1f,
+        restitution : Float = 0f
+    ) : Shape, RigidBody {
 
-    var body : Body
-
-    init {
-        val bodyDef = BodyDef()
-        bodyDef.type = BodyDef.BodyType.KinematicBody
-        bodyDef.position.set(position)
-        body = World2d.i.world.createBody(bodyDef)
-
-        val polyShape = PolygonShape()
-        polyShape.setAsBox(width, height)
-
-        val fixtureDef = FixtureDef()
-        fixtureDef.shape = polyShape
-        fixtureDef.density = 1f
-
-        body.createFixture(fixtureDef)
-    }
-
+    override var body : Body = RectBody(bodyType, position, width, height,
+                        density, friction, restitution).get()
 
     override fun render() {
         Render.i.renderer.begin(shapeType)

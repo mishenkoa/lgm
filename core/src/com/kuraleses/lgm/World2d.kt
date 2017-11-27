@@ -1,6 +1,7 @@
 package com.kuraleses.lgm
 
 import com.badlogic.gdx.math.Vector2
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer
 import com.badlogic.gdx.physics.box2d.World
 
 class World2d {
@@ -25,8 +26,11 @@ class World2d {
 
     val world = World(worldConfig.gravity, worldConfig.doSleep)
 
+//    var dbgRenderer = Box2DDebugRenderer() // debug physics renderer
+
     fun step() {
         world.step(stepConfig.timeStep, stepConfig.velocityIterations,
                 stepConfig.positionIterations)
+//        dbgRenderer.render(world, Render.i.renderer.projectionMatrix)
     }
 }
