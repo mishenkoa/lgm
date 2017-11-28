@@ -2,8 +2,8 @@ package com.kuraleses.lgm.handlers
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.math.Vector2
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer
 import com.badlogic.gdx.physics.box2d.World
-
 
 class World2d {
     private object Holder {
