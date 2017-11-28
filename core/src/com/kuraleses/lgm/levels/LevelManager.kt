@@ -29,10 +29,10 @@ public class LevelManager private constructor() {
     }
 
     fun createFakeLevel() : Level {
-        var circle = Circle(Vector2(100f, 200f), 50f, "#cccccc", ShapeRenderer.ShapeType.Filled, BodyDef.BodyType.DynamicBody)
-        var circle2 = Circle(Vector2(234f, 228f), 50f, "#cccccc", ShapeRenderer.ShapeType.Filled, BodyDef.BodyType.DynamicBody)
-        var rect = Rect(Vector2(300f, 300f), 50f, 50f,"#cccccc", ShapeRenderer.ShapeType.Filled, BodyDef.BodyType.DynamicBody)
-        var rect2 = Rect(Vector2(0f, 0f), 800f, 20f,"#cccccc", ShapeRenderer.ShapeType.Filled, BodyDef.BodyType.StaticBody)
+        var circle = Circle(Vector2(1f, 2f), 0.5f, "#cccccc", ShapeRenderer.ShapeType.Filled, BodyDef.BodyType.DynamicBody)
+        var circle2 = Circle(Vector2(2.34f, 2.28f), 0.5f, "#cccccc", ShapeRenderer.ShapeType.Filled, BodyDef.BodyType.DynamicBody)
+        var rect = Rect(Vector2(3f, 3f), 0.5f, 0.5f,"#cccccc", ShapeRenderer.ShapeType.Filled, BodyDef.BodyType.DynamicBody)
+        var rect2 = Rect(Vector2(0f, 0f), 8f, 0.2f,"#cccccc", ShapeRenderer.ShapeType.Filled, BodyDef.BodyType.StaticBody)
         var level1 = Level(mutableListOf(circle, circle2, rect, rect2), LevelState.IN_PROGRESS, 1)
         return level1
     }

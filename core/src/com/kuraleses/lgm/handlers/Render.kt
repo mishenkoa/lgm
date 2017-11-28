@@ -1,4 +1,4 @@
-package com.kuraleses.lgm
+package com.kuraleses.lgm.handlers
 
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 

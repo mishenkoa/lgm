@@ -2,7 +2,7 @@ package com.kuraleses.lgm.physics
 
 import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.physics.box2d.*
-import com.kuraleses.lgm.World2d
+import com.kuraleses.lgm.handlers.World2d
 
 class RectBody(
         private val bodyType : BodyDef.BodyType,

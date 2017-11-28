@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.math.MathUtils.radiansToDegrees
 import com.badlogic.gdx.physics.box2d.*
-import com.kuraleses.lgm.Render
+import com.kuraleses.lgm.handlers.Render
 import com.kuraleses.lgm.interfaces.Shape
 import com.kuraleses.lgm.physics.RectBody
 

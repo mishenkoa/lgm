@@ -4,8 +4,7 @@ import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.physics.box2d.*
-import com.kuraleses.lgm.Render
-import com.kuraleses.lgm.interfaces.RigidBody
+import com.kuraleses.lgm.handlers.Render
 import com.kuraleses.lgm.interfaces.Shape
 import com.kuraleses.lgm.physics.CircleBody
 
@@ -26,7 +25,7 @@ class Circle(
     override fun render() {
         Render.i.renderer.begin(shapeType)
         Render.i.renderer.color = Color.valueOf(color)
-        Render.i.renderer.circle(body.position.x, body.position.y, radius)
+        Render.i.renderer.circle(body.position.x, body.position.y, radius, 1000)
         Render.i.renderer.end()
     }
 }
