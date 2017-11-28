@@ -21,8 +21,8 @@ class RectBody(
         val body = World2d.i.world.createBody(bodyDef)
 
         val polyShape = PolygonShape()
-        val centerOfRect = Vector2(width/ 2, height/ 2)
-        polyShape.setAsBox(centerOfRect.x,centerOfRect.y, centerOfRect, 0f)
+        val centerOfRect = Vector2(width / 2, height / 2)
+        polyShape.setAsBox(centerOfRect.x ,centerOfRect.y, Vector2(0f, 0f), bodyDef.angle)
 
         val fixtureDef = FixtureDef()
         fixtureDef.shape = polyShape

@@ -20,7 +20,7 @@ class World2d {
     }
 
     private val worldConfig = object {
-        val gravity = Vector2(0f, -0.98f)
+        val gravity = Vector2(0f, 0f)
         val doSleep = true
     }
 

@@ -18,7 +18,7 @@ class Circle(
         density : Float = 1f,
         friction : Float = 1f,
         restitution : Float = 0f
-    ) : Shape, RigidBody {
+    ) : Shape {
 
     override var body : Body = CircleBody(bodyType, position, radius,
                         density, friction, restitution).get()

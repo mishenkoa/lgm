@@ -3,12 +3,13 @@ package com.kuraleses.lgm
 import com.badlogic.gdx.ApplicationAdapter
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.GL20
+import com.badlogic.gdx.math.MathUtils
+import com.badlogic.gdx.math.MathUtils.degreesToRadians
+import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.utils.viewport.ExtendViewport
 import com.kuraleses.lgm.levels.Level
 import com.kuraleses.lgm.levels.LevelManager
 import com.badlogic.gdx.utils.viewport.FitViewport
-
-
 
 class GameField : ApplicationAdapter() {
     val WORLD_WIDTH = 1000.0f
